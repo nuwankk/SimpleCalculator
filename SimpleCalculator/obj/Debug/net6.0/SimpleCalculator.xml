@@ -1,0 +1,129 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SimpleCalculator</name>
+    </assembly>
+    <members>
+        <member name="T:bf.api.auth.User">
+            <summary>
+            Authentication controller
+            </summary>
+        </member>
+        <member name="M:bf.api.auth.User.JWTLogin(bf.api.Helpers.AuthObject)">
+            <summary>
+            Common method to authenticate the mock JWT user
+            </summary>
+            <param name="inboundObject">User authentication object</param>
+            <returns>This will return the status result after processing the given data set.
+            Always look for standard HTTP reponse codes and expected results are 200, 204, 400, 404, 422
+            In the event of internal errors, refer IsSuccess boolean property and errors will be available with ErrorMessage property
+            </returns>
+        </member>
+        <member name="T:bf.api.calc.Calculator">
+            <summary>
+            Calculator controller
+            </summary>
+        </member>
+        <member name="M:bf.api.calc.Calculator.Addition(bf.api.Helpers.CalcIn)">
+            <summary>
+            To get the calculated addition result of the given numeric values
+            </summary>
+            <returns>This will return the status result after processing the given data set.
+            Always look for the standard HTTP response codes and expected results are 200, 204, 400, 404, 422
+            In the event of internal errors, refer IsSuccess boolean property and errors will be available with ErrorMessage property
+            </returns>
+        </member>
+        <member name="M:bf.api.calc.Calculator.Substraction(bf.api.Helpers.CalcIn)">
+            <summary>
+            To get the calculated substraction (number1 - number2) result of the given numeric values
+            </summary>
+            <returns>This will return the status result after processing the given data set.
+            Always look for the standard HTTP response codes and expected results are 200, 204, 400, 404, 422
+            In the event of internal errors, refer IsSuccess boolean property and errors will be available with ErrorMessage property
+            </returns>
+        </member>
+        <member name="M:bf.api.calc.Calculator.Multiply(bf.api.Helpers.CalcIn)">
+            <summary>
+            To get the calculated multiplied result of the given numeric values
+            </summary>
+            <returns>This will return the status result after processing the given data set.
+            Always look for the standard HTTP response codes and expected results are 200, 204, 400, 404, 422
+            In the event of internal errors, refer IsSuccess boolean property and errors will be available with ErrorMessage property
+            </returns>
+        </member>
+        <member name="M:bf.api.calc.Calculator.Devision(bf.api.Helpers.CalcIn)">
+            <summary>
+            To get the calculated devision (number1 / number2) result of the given numeric values
+            </summary>
+            <returns>This will return the status result after processing the given data set.
+            Always look for the standard HTTP response codes and expected results are 200, 204, 400, 404, 422
+            In the event of internal errors, refer IsSuccess boolean property and errors will be available with ErrorMessage property
+            </returns>
+        </member>
+        <member name="T:bf.api.Helpers.Result">
+            <summary>
+            This Result structure used to return common object result for all API methods
+            </summary>
+        </member>
+        <member name="P:bf.api.Helpers.Result.IsSuccess">
+            <summary>
+            Rperesents the invoke status where user can validate the true,false value
+            </summary>
+        </member>
+        <member name="P:bf.api.Helpers.Result.ErrorMessage">
+            <summary>
+            Shows the error message in the event of internal errors
+            </summary>
+        </member>
+        <member name="P:bf.api.Helpers.Result.UserMessage">
+            <summary>
+            Shows the user friendly error message where user can directly show it in front end applications
+            </summary>
+        </member>
+        <member name="P:bf.api.Helpers.Result.Value">
+            <summary>
+            Returns a single object on the API result
+            </summary>
+        </member>
+        <member name="P:bf.api.Helpers.Result.Values">
+            <summary>
+            Returns object array on the API result
+            </summary>
+        </member>
+        <member name="P:bf.api.Helpers.Result.JWT">
+            <summary>
+            Generated JWT 
+            </summary>
+        </member>
+        <member name="T:bf.api.Helpers.CalcIn">
+            <summary>
+            This input structure used to calculate for all calculator API methods
+            </summary>
+        </member>
+        <member name="P:bf.api.Helpers.CalcIn.Number1">
+            <summary>
+            First value for the arithmetic operations
+            </summary>
+        </member>
+        <member name="P:bf.api.Helpers.CalcIn.Number2">
+            <summary>
+            Second value for the arithmetic operations
+            </summary>
+        </member>
+        <member name="T:bf.api.Helpers.AuthObject">
+            <summary>
+            Public structure for authentications
+            </summary>
+        </member>
+        <member name="P:bf.api.Helpers.AuthObject.UserName">
+            <summary>
+            String user name
+            </summary>
+        </member>
+        <member name="P:bf.api.Helpers.AuthObject.Password">
+            <summary>
+            String password
+            </summary>
+        </member>
+    </members>
+</doc>
